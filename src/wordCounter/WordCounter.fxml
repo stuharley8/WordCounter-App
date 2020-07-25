@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="250.0" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wordCounter.Controller">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openOnAction" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#outputOnAction" text="Select Output File" />
+                        <MenuItem mnemonicParsing="false" onAction="#logOnAction" text="Select Log File" />
+                        <MenuItem mnemonicParsing="false" onAction="#exitOnAction" text="Exit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Label fx:id="outputPathLabel" prefHeight="75.0" prefWidth="3000.0" text="   Output Path:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="logPathLabel" prefHeight="75.0" prefWidth="3000.0" text="   Log Path:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="statusLabel" prefHeight="75.0" prefWidth="800" text="   Status:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <HBox prefHeight="75.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="75.0" prefWidth="425.0" text="   Select Number of Most Popular Letters to Display:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="numPopularLettersSpinner" initialValue="1" max="10" min="1" onMouseClicked="#updateNumPopularLettersOnAction" prefHeight="75.0" prefWidth="68.0" />
+         </children>
+      </HBox>
+      <Label fx:id="numLinesLabel" prefHeight="75.0" prefWidth="800.0" text="   Number of Lines:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="numValidWordsLabel" prefHeight="75.0" prefWidth="800.0" text="   Number of Valid Words:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="numInvalidWordsLabel" prefHeight="75.0" prefWidth="800.0" text="   Number of Invalid Words:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+</VBox>
